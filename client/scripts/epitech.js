@@ -1,0 +1,31 @@
+var form = document.querySelector('form');
+var nom = form.querySelector('input');
+nom.setAttribute('aria-label', nom.parentNode.previousSibling.previousSibling.firstChild.nodeValue);
+var cc = document.createElement('p');
+var checkboxcc = document.createElement('input');
+checkboxcc.setAttribute('id', 'cc');
+checkboxcc.setAttribute('type', 'checkbox');
+cc.appendChild(checkboxcc);
+cc.appendChild(document.createTextNode(' Adresser une copie de ce message sur mon adresse électronique.'));
+form.insertBefore(cc, form.querySelector('p:last-child'));
+var envoyer = document.querySelector('input[type="submit"]');
+envoyer.setAttribute('value', 'Soumettre');
+envoyer.removeAttribute('aria-label');
+var telephone = form.querySelector('input[type="tel"]');
+telephone.parentNode.parentNode.parentNode.removeChild(telephone.parentNode.parentNode);
+form.addEventListener('submit', function(event) {
+	var mailto = document.getElementById('mailto').getAttribute('href');
+	var nom = this.querySelector('input');
+	var prenom = this.querySelector('input[aria-labelledby="prenom"]');
+	var email = this.querySelector('input[type="email"]');
+	var message = this.querySelector('textarea');
+	message = message.value + "\n\n******\n" + prenom.value + ' ' + nom.value
+	var cc = this.querySelector('input[type="checkbox"]');
+	var mailto = mailto + '?subject=[Epitech]Demande de contact' + (cc.checked ? '&cc=' + email.value : '') + '&body=' + message.replace(/\n|\r/g, '%0D%0A');
+	var a = document.createElement('a');
+	a.setAttribute('href', mailto);
+	var e = document.createEvent('MouseEvent');
+	e.initEvent('click', true, true);
+	a.dispatchEvent(e);
+	event.preventDefault();
+}, false);

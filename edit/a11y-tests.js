@@ -1,0 +1,1 @@
+/* JS pour réaliser les tests d'accessibilité */
