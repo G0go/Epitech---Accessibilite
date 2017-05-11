@@ -83,7 +83,16 @@
 						<td><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/RGAA-PDF/RGAA-3-2016-PDF/RGAA-3-2016-Referentiel-techique.pdf">RGAA 3 2016 (PDF, 1.3 Mo)</a></td>
 					</tr>
 				</table>
-				<p>Note : le RGAA est une traduction opérationnelle des WCAG. Par exemple, le critère de succès WCAG <q lang="en">1.1.1 Non-text Content: All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.</q> a pour traduction opérationnelle possible dans le RGAA <q>1.1 Chaque image a-t-elle une alternative textuelle ?</q>.</p>
+				<p>Note : le RGAA est une traduction opérationnelle des WCAG. Par exemple, le critère de succès WCAG <q lang="en">1.1.1 Non-text Content: All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.</q> a pour traduction opérationnelle possible dans le RGAA :</p>
+				<blockquote>
+					<p>1.1 Chaque image a-t-elle une alternative textuelle ?</p>
+					<ol>
+						<li>Test 1.1.1 : Chaque image (balise img) a-t-elle un attribut alt ?</li>
+						<li>Test 1.1.2 : Chaque zone (balise area) d’une image réactive a-t-elle un attribut alt ?</li>
+						<li>Test 1.1.3 : Chaque bouton de formulaire (balise input avec l’attribut type="image") a-t-il un attribut alt ?</li>
+						<li>Test 1.1.4 : Chaque zone cliquable d’une image réactive coté serveur est-t-elle doublée d’un lien dans la page ?</li>
+					</ol>
+				</blockquote>
 			</article>
 			<aside id="nous-contacter">
 				<div>
