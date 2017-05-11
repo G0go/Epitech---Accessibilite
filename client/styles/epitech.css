@@ -208,6 +208,22 @@ table {
 		width: 928px;
 	}
 	
+	#ressources a {
+		color: #000;
+	}
+	
+	#ressources table {
+		background-color: #fff;
+		border: none;
+		border-collapse: collapse;
+		color: #000;
+	}
+	
+	#ressources td, #ressources th {
+		border: solid 1px #ec008c;
+		padding: 2px;
+	}
+	
 	#nous-contacter {
 		font-size: 0.9em;
 		line-height: 2em;
@@ -234,7 +250,6 @@ table {
 	#nous-contacter form {
 		float: left;
 	}
-	
 	
 	[role="presentation"] td:first-child {
 		padding-right: 0.5em;
