@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>&laquo; Menu animé &raquo; à analyser et à corriger</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			.description {
+				color: #fff;
+				font-family: Arial, sans-serif;
+				font-size: 0.85em;
+				padding: 1.5em 2em;
+				text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+			}
+			.description a {
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menu-section">
+			<nav role="navigation">
+				<div class="menu-toggle">
+					<div class="one"></div>
+					<div class="two"></div>
+					<div class="three"></div>
+				</div>
+				<ul class="hidden">
+					<li><a href="#">Travail</a></li>
+					<li><a href="#">A propos</a></li>
+					<li><a href="#"><abbr lang="la" title="Curriculum Vit&aelig;">CV</abbr></a></li>
+					<li><a href="#">Me contacter</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="description">
+			<h1>Exercice 1</h1>
+			<h2>Analyser et corriger</h2>
+			<p>Après avoir analyser les problèmes d'accessibilité propres à l'implémentation de ce menu, corriger cette implémentation.</p>
+			<h2>A propos</h2>
+			<p>Cet exercice est basé sur le menu de navigation <a href="https://codepen.io/unax3/pen/FEtze" target="_blank"><span lang="en">Animated Menu</span> (nouvelle fenêtre)</a> de Una Kravets.</p>
+			<p>Avec les modifications du code original :</p>
+			<ul>
+				<li>l'élément .menu-toggle (<span lang="en">burger icon</span>) a été déplacé dans l'élément nav ;</li>
+				<li>l'attribut role="navigation" a été déplacé de l'élément ul à l'élément nav.</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
